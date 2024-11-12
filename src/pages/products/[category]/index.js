@@ -9,6 +9,8 @@ export async function getServerSideProps(context) {
 
   const categoryCtrl = new Categories();
   const responseCategory = await categoryCtrl.getBySlug(category);
+  
+  
 
 
   const productCtrl = new Products();

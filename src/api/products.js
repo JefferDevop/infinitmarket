@@ -1,7 +1,6 @@
 import { BASE_API } from "../config/constants";
 
 export class Products {
-
   async getProducts() {
     try {
       const url = `${BASE_API}/api/products/?active=true`;
@@ -76,7 +75,7 @@ export class Products {
         throw error;
       }
     } else {
-      return null
+      return null;
     }
   }
 
@@ -93,6 +92,4 @@ export class Products {
       throw error;
     }
   }
-
-
 }
