@@ -70,7 +70,7 @@ export function FooterApp() {
         </div>
 
         <Link
-          href={`https://infinitymarket.suprainnovations.store/admin-dashboard/login/?next=/admin-dashboard/`}
+          href={`${BASE_API}/admin-dashboard/login/?next=/admin-dashboard/`}
         >
           <CardImg src="/image/btn-user.jpg" alt="Usuario" />{" "}
         </Link>
