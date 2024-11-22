@@ -24,7 +24,7 @@ export function FooterCart(props) {
   const { products } = props;
   const { deleteAllCart } = useCart();
   const { addOrders } = useOrder();
-  const { items, selectedItem, handleItemClick } = useWhatsApp();
+  const { seller, items, selectedItem, handleItemClick } = useWhatsApp();
   const router = useRouter();
   const [newOrder, setNewOrder] = useState([
     { item: "", qty: 0, price: 0.0, comment: "" },
@@ -174,6 +174,7 @@ export function FooterCart(props) {
               onClick={() => handleItemClick(item)}
             >
               <BsWhatsapp size={20} /> Linea {index + 1}
+              <p>{seller[index]}</p>
             </Button>
           ))}
         </ModalBody>

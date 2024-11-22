@@ -25,7 +25,7 @@ export function DetailProduct(props) {
   const { product, relate } = props;
   const { addCart } = useCart();
   const { getGalleryByCode, gallery } = useGallery();
-  const { generateWhatsAppLink, items, selectedItem, handleItemClick } =
+  const { generateWhatsAppLink, seller, items, selectedItem, handleItemClick } =
     useWhatsApp();
   const { ...productDetall } = product ?? {};
 
@@ -269,6 +269,7 @@ export function DetailProduct(props) {
                     onClick={() => handleItemClick(item)}
                   >
                     <BsWhatsapp size={20} /> Linea {index + 1}
+                    <p>{seller[index]}</p>
                   </Button>
                 ))}
               </FormGroup>
