@@ -42,9 +42,12 @@ export function Search(props) {
                 <div className={styles.product}>
                   <CardTitle className={styles.title}>
                     <p>{product.name_extend}</p>
-                    {product.price1 !== null && (
-                      <h6>$ {format(product.price1)}</h6>
-                    )}
+                    {product?.price1 > 1 && (
+                    <h6>Precio General $ {format(product?.price1)} </h6>
+                  )}
+                  {product?.price2 > 1 && (
+                    <h6>Precio Mayorista $ {format(product?.price2)}</h6>
+                  )}
                     <h5>Disponible: {product.qty}</h5>
                   </CardTitle>
                 </div>
