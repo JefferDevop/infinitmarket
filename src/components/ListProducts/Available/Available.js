@@ -114,7 +114,11 @@ export function Available(props) {
       <div className={styles.product}>
         <div className={styles.price}>
           {product.productData.price1 > 0 && (
-            <h6>$ {format(product.productData.price1)}</h6>
+            <>
+            <h6>Precio General $ {format(product.productData.price1)}</h6>
+            <h6>Precio Mayorista $ {format(product.productData.price2)}</h6>
+            </>
+            
           )}
           {product.productData.price_old > 0 && 
           <p> $ {format(parseInt(product.productData.price_old))}</p>
